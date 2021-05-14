@@ -6,7 +6,8 @@ import Weather from './component/weather';
 import Form from './component/form';
 
 
-const api_key="5e5eee674941d08b66595b94886cc908";
+// const api_key="5e5eee674941d08b66595b94886cc908";
+const api_key="B_3qztsnkmWQZFCItyOiTgjGwuR3vDvDniHUoo277IQ"
 
 //api call api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 class App extends React.Component{
@@ -26,7 +27,8 @@ constructor() {
     e.preventDefault();
     const city=e.target.elements.city.value;
       const api_call = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`
+        // `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`
+        `https://trefle.io/api/v1/plants?token=${api_key}`
         );
       const response = await api_call.json();
       this.setState({
